@@ -8,17 +8,16 @@ function showSocials(e) {
   if (!open) {
     shareBtn.children[0].style.display = "flex";
     shareBtn.children[0].style.cursor = "default";
-    shareBtn.visibility = "hidden";
-    info.style.display = "none";
+    info.classList.add("hide-info");
     open = true;
   } else {
     if (
       e.target.classList.contains("share-btn") ||
       e.target.classList.contains("share-movil")
     ) {
-      open = false;
       shareBtn.children[0].style.display = "none";
-      info.style.display = "flex";
+      info.classList.remove("hide-info");
+      open = false;
     }
   }
 
